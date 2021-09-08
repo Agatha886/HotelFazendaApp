@@ -4,12 +4,14 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
+
 public class Quarto implements Serializable {
+
     private final String quarto;
     private final String imagem;
     private final int pessoas;
-    private  Calendar dateDeIda;
-    private Calendar dateDeVoltar;
+    protected   Calendar dateDeIda;
+    protected Calendar dateDeVoltar;
     private BigDecimal precoDaDiaria;
     private BigDecimal precoTotal;
 

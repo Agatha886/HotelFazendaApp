@@ -178,6 +178,9 @@ public class CadastroHospedagemActivity extends AppCompatActivity {
             quarto.setPrecoTotal(total);
             String valorTotal = MoedaUtil.formataParaBrasileiro(total);
             textViewPeriodo.setText(valorTotal);
+        } else if( dias == 0){
+            quarto.setPrecoTotal(quarto.getPrecoDaDiaria());
+            textViewPeriodo.setText(MoedaUtil.formataParaBrasileiro(quarto.getPrecoTotal()));
         }
     }
 

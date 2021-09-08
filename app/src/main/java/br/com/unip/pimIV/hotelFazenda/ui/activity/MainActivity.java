@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         setNavegacao();
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
     private void setMensagemDeOla() {
         String mensagemDeOla = "Olá," + " " + usuario.getNome();
         TextView campoMensagem = findViewById(R.id.main_textView_nome);
