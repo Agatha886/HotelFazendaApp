@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pagamento_graph"
+    app:startDestination="@id/sobre_nos">
+
+    <fragment
+        android:id="@+id/sobre_nos"
+        android:name="br.com.unip.pimIV.hotelFazenda.fragment.SobreNosFragment"
+        android:label="Sobre Nós"
+        tools:layout="@layout/sobre_nos"/>
+
+    <fragment
+        android:id="@+id/lista_quartos"
+        android:name="br.com.unip.pimIV.hotelFazenda.fragment.ListaQuartosFragment"
+        android:label="Lista de Quartos"
+        tools:layout="@layout/lista_quartos"/>
+
+    <fragment
+        android:id="@+id/conta_login"
+        android:name="br.com.unip.pimIV.hotelFazenda.fragment.ContaDoUsuarioFragment"
+        android:label="Meus Dados"
+        tools:layout="@layout/conta_usuario"/>
+
+    <fragment
+        android:id="@+id/minhas_compras"
+        android:name="br.com.unip.pimIV.hotelFazenda.fragment.ListaDeComprasFragment"
+        android:label="Minhas Compras"
+        tools:layout="@layout/lista_compras_realizadas"/>
+</navigation>

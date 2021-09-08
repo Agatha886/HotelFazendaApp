@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">HotelFazenda</string>
+
+    <string name="texto_sobre_nos_part1">Possuimos ambiente familiar e administrado por vários
+        membros de uma família. As demais pessoas que prestam serviços no Hotel Fazenda e, são
+        moradores da região, sempre dispostos a ajudar de forma cordial e pro eficiente.
+
+</string>
+
+    <string name="texto_sobre_nos_part2">Os Hóspedes vizinhos a
+        sua acomodação, serão na maioria, regresso ou amigos do Aldeia do Vale, amigáveis, alheios
+        ao status social, credo e cor aos demais hóspedes.</string>
+
+    <string name="texto_sobre_nos_part3">Esperamos que efetue reserva em nosso
+        empreendimento e que sua estadia seja agradável, aproveite todos os momentos em contato com
+        a natureza, faça novos amigos e juntos vamos promover uma estadia inesquecível para a sua e
+        a família Aldeia do Vale.</string>
+
+
+    <string name="mascara_abecedario">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
+
+    <string name="informativo_pagamento">Digite as Informações do cartão que você deseja usar para o pagamento</string>
+
+    <string name="parabens">Parabéns!</string>
+    <string name="compra_sucesso">Compra realizada com sucesso :)</string>
+    <string name="conferir_resumo_compra">Confira o resumo da compra:</string>
+    <string name="banner_resumo_compra">Banner parabéns pela compra</string>
+</resources>

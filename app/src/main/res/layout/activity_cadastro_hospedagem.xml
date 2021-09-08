@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CadastroHospedagemActivity">
+
+    <ImageView
+        android:id="@+id/cadastro_hospedagem_img"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+   <View
+       android:id="@+id/item_quarto_divisor"
+       android:layout_width="0dp"
+       android:layout_height="3dp"
+       android:background="@android:color/holo_orange_dark"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/cadastro_hospedagem_img" />
+
+   <TextView
+        android:id="@+id/cadastro_hospedagem_textview_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Quarto x"
+        android:layout_margin="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_img"/>
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_textview_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2 pessoas"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_pessoas"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="14dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_hospedagem_textview_local"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_textview_local"/>
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_data_ida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Data de Ida:"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_hospedagem_textview_local"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_textview_dias"/>
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_textview_data_ida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="08/04/2021"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_hospedagem_data_ida"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_data_ida"/>
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_data_volta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/cadastro_hospedagem_textview_preco"
+        app:layout_constraintStart_toEndOf="@id/cadastro_hospedagem_data_ida"
+        app:layout_constraintTop_toTopOf="@id/cadastro_hospedagem_data_ida"
+        android:text="Data de Volta:"/>
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_textview_data_volta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/cadastro_hospedagem_data_volta"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/cadastro_hospedagem_data_volta"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_data_volta"
+        tools:text="08/04/2021" />
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total:"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_hospedagem_textview_dias"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_textview_data_volta" />
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_textview_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/cadastro_hospedagem_textview_preco"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_hospedagem_total"
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_hospedagem_total"
+        tools:text="R$ 243,99" />
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço da Diária"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cadastro_hospedagem_data_volta"
+        app:layout_constraintTop_toTopOf="@+id/cadastro_hospedagem_data_volta" />
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_textview_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/cadastro_hospedagem_preco"
+        app:layout_constraintStart_toStartOf="@id/cadastro_hospedagem_preco"
+        app:layout_constraintTop_toBottomOf="@id/cadastro_hospedagem_preco"
+        tools:text="R$ 243,99" />
+
+    <TextView
+        android:id="@+id/cadastro_hospedagem_textview_preco_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/cadastro_hospedagem_textview_preco"
+        app:layout_constraintBottom_toTopOf="@+id/cadastro_hospedagem_textview_total"/>
+
+    <Button
+        android:id="@+id/cadastro_hospedagem_btn_realizar_compra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_margin="8dp"
+        android:text="Prosseguir"
+        android:background="@color/black"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

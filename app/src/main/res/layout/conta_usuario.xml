@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/conta_img_pessoa"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_pessoa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+   <TextView
+       android:id="@+id/conta_text_nome"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="@id/conta_nome"
+       tools:text="Agatha Monfredini"
+       android:layout_marginRight="15dp"
+       android:textSize="22sp"
+       android:textColor="@color/teal_700"
+       app:layout_constraintStart_toEndOf="@+id/conta_nome"
+       android:layout_marginLeft="35dp"
+       app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/conta_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Nome: "
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/conta_img_pessoa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conta_img_pessoa" />
+
+    <TextView
+        android:id="@+id/conta_text_cpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/teal_700"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/conta_text_nome"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/conta_text_nome"
+        app:layout_constraintBottom_toBottomOf="@id/conta_cpf"
+        tools:text="13733897702"/>
+
+    <TextView
+        android:id="@+id/conta_cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cpf: "
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        app:layout_constraintStart_toStartOf="@id/conta_nome"
+        app:layout_constraintTop_toBottomOf="@id/conta_nome" />
+
+    <TextView
+        android:id="@+id/conta_text_telefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="(12) 774125898 "
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        android:textColor="@color/teal_700"
+        app:layout_constraintTop_toBottomOf="@id/conta_text_cpf"
+        app:layout_constraintStart_toStartOf="@id/conta_text_cpf"
+        app:layout_constraintEnd_toEndOf="@id/conta_text_cpf"/>
+
+    <TextView
+        android:id="@+id/conta_telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Telefone: "
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        app:layout_constraintStart_toStartOf="@id/conta_cpf"
+        app:layout_constraintTop_toBottomOf="@id/conta_cpf" />
+
+    <TextView
+        android:id="@+id/conta_text_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/teal_700"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/conta_text_telefone"
+        app:layout_constraintStart_toStartOf="@id/conta_text_telefone"
+        app:layout_constraintTop_toTopOf="@id/conta_email"
+        tools:text="agatha@gmail.com" />
+
+    <TextView
+        android:id="@+id/conta_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Email: "
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        app:layout_constraintStart_toStartOf="@id/conta_cpf"
+        app:layout_constraintTop_toBottomOf="@id/conta_telefone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

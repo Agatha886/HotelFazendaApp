@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sobre_nos"
+        android:enabled="true"
+        android:icon="@drawable/ic_sobre_nos"
+        android:title="Sobre Nós"/>
+
+    <item
+        android:id="@+id/lista_quartos"
+        android:enabled="true"
+        android:icon="@drawable/ic_store"
+        android:title="Quartos"
+        />
+
+    <item
+        android:id="@+id/conta_login"
+        android:enabled="true"
+        android:icon="@drawable/ic_pessoa"
+        android:title="Conta"
+        />
+
+    <item
+        android:id="@+id/minhas_compras"
+        android:enabled="true"
+        android:icon="@drawable/ic_carrinho"
+            android:title="Compras"
+        />
+</menu>

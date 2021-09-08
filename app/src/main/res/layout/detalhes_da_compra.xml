@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+    
+    <ImageView
+        android:id="@+id/detalhes_compra_imagem"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        tools:src="@drawable/suite"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/detalhes_compra_textview_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="São Paulo"
+        android:textSize="24sp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_compra_imagem"/>
+
+    <TextView
+        android:id="@+id/detalhes_compra_periodo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Período:"
+        android:textSize="17sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/detalhes_compra_textview_nome"
+        app:layout_constraintEnd_toEndOf="@id/detalhes_compra_textview_nome"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_compra_textview_nome"/>
+
+    <TextView
+        android:id="@+id/detalhes_compra_textview_periodo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="08/12 - 10/12 de 2017"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/detalhes_compra_textview_nome"
+        app:layout_constraintEnd_toEndOf="@id/detalhes_compra_textview_nome"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_compra_periodo"/>
+    <TextView
+        android:id="@+id/resumo_preco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:text="Valor:"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/detalhes_compra_textview_periodo"
+        app:layout_constraintEnd_toEndOf="@id/detalhes_compra_textview_periodo"
+        app:layout_constraintTop_toBottomOf="@id/detalhes_compra_textview_periodo" />
+
+    <TextView
+        android:id="@+id/detalhes_compra_textview_preco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_green_dark"
+        tools:text="R$ 243,99"
+        app:layout_constraintStart_toStartOf="@id/detalhes_compra_textview_periodo"
+        app:layout_constraintEnd_toEndOf="@id/detalhes_compra_textview_periodo"
+        app:layout_constraintTop_toBottomOf="@id/resumo_preco" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
