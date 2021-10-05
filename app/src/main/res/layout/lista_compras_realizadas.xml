@@ -6,6 +6,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white">
 
+    <TextView
+        android:id="@+id/lista_compras_text_view_sem_compras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Você não realizou nenhuma compra ainda :("
+        android:textAlignment="center"
+        android:textColor="@color/color_primary"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="15dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_compras_recyclerView"
         android:layout_width="0dp"
@@ -16,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.3"
         app:spanCount="2"
-        tools:listitem="@layout/detalhes_da_compra"/>
+        tools:listitem="@layout/detalhes_da_compra" />
 </androidx.constraintlayout.widget.ConstraintLayout>
