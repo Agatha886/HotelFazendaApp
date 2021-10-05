@@ -63,14 +63,16 @@ public class MainActivity extends AppCompatActivity {
                     int itemId = item.getItemId();
                     if (itemId == R.id.sobre_nos) {
                         fragmentSelecionado = new SobreNosFragment();
-
+                        setTitle("Sobre Nós");
                     }
                     if (itemId == R.id.lista_quartos) {
                         fragmentSelecionado = new ListaQuartosFragment();
+                        setTitle("Lista De Quartos");
                         setCliqueItemQuarto();
                     }
                     if (itemId == R.id.conta_login) {
                         fragmentSelecionado = new ContaDoUsuarioFragment();
+                        setTitle("Minha Conta");
                     }
 
                     if (itemId == R.id.minhas_compras) {

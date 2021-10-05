@@ -32,6 +32,7 @@ public class ListaDeComprasFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         Context context = getActivity().getApplicationContext();
         List<Quarto> listaDeCompras = UsuarioDAO.usuario.listaDeCompras;
+        getActivity().setTitle("Minhas Compras");
 
         if (listaDeCompras.size() > 0) {
             TextView semCompras = getActivity().findViewById(R.id.lista_compras_text_view_sem_compras);

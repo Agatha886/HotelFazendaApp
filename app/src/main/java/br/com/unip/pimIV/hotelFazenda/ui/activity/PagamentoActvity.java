@@ -23,6 +23,7 @@ public class PagamentoActvity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagamento);
+        setTitle("Pagamento");
         TextView textViewPeriodo = findViewById(R.id.pagamento_textview_preco);
         Intent dadosRecebido = getIntent();
 
