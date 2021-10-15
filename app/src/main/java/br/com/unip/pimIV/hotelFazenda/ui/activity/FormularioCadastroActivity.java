@@ -6,10 +6,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.FirebaseNetworkException;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +29,10 @@ import br.com.unip.pimIV.hotelFazenda.formatter.FormataTelefoneComDdd;
 import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 import br.com.unip.pimIV.hotelFazenda.validator.ValidaCpf;
 import br.com.unip.pimIV.hotelFazenda.validator.ValidaEmail;
+import br.com.unip.pimIV.hotelFazenda.validator.ValidaSenha;
 import br.com.unip.pimIV.hotelFazenda.validator.ValidaTelefoneComDdd;
 import br.com.unip.pimIV.hotelFazenda.validator.ValidacaoPadrao;
 import br.com.unip.pimIV.hotelFazenda.validator.Validador;
-
 
 
 public class FormularioCadastroActivity extends AppCompatActivity {
@@ -38,6 +46,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
     private TextInputLayout textInputCpf;
     private TextInputLayout textInputNomeCompleto;
     private UsuarioDAO usuarioDao = new UsuarioDAO();
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +56,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
     }
 
     private void inicializaCampos() {
+        firebaseAuth = FirebaseAuth.getInstance();
         configuraCampoNomeCompleto();
         configuraCampoCpf();
         configuraCampoTelefoneComDdd();
@@ -61,7 +71,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean formularioEstaValido = validaTodosCampos();
-                if(formularioEstaValido){
+                if (formularioEstaValido) {
                     cadastroRealizado();
                 }
             }
@@ -74,13 +84,26 @@ public class FormularioCadastroActivity extends AppCompatActivity {
         String nome = textInputNomeCompleto.getEditText().getText().toString();
         String senha = textInputSenha.getEditText().getText().toString();
         String telefone = textInputTelefoneComDdd.getEditText().getText().toString();
-        Usuario usuarioCadastrado = new Usuario(nome,cpf,telefone,email,senha);
+        Usuario usuarioCadastrado = new Usuario(nome, cpf, telefone, email, senha);
 
-        if(usuarioCadastrado != null){
-            usuarioDao.adicionaUsuario(usuarioCadastrado);
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+        if (usuarioCadastrado != null) {
+            Task<AuthResult> userWithEmailAndPassword = firebaseAuth.createUserWithEmailAndPassword(email, senha);
+            userWithEmailAndPassword.addOnSuccessListener(this, new OnSuccessListener<AuthResult>() {
+                @Override
+                public void onSuccess(AuthResult authResult) {
+                    Intent intent = new Intent(FormularioCadastroActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+            });
 
+            userWithEmailAndPassword.addOnFailureListener(this, new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    if (e.getClass().equals(FirebaseNetworkException.class)) {
+                        Toast.makeText(FormularioCadastroActivity.this, "Sem internet", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
         }
     }
 
@@ -88,7 +111,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
         boolean formularioEstaValido = true;
         for (Validador validador :
                 validadores) {
-            if(!validador.estaValido()){
+            if (!validador.estaValido()) {
                 formularioEstaValido = false;
             }
         }
@@ -97,7 +120,17 @@ public class FormularioCadastroActivity extends AppCompatActivity {
 
     private void configuraCampoSenha() {
         textInputSenha = findViewById(R.id.login_campo_senha);
-        adicionaValidacaoPadrao(textInputSenha);
+        EditText campoSenha = textInputSenha.getEditText();
+        final ValidaSenha validador = new ValidaSenha(textInputSenha);
+        validadores.add(validador);
+        campoSenha.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (!hasFocus) {
+                    validador.estaValido();
+                }
+            }
+        });
     }
 
     private void configuraCampoEmail() {
@@ -108,7 +141,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
         campoEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if(!hasFocus){
+                if (!hasFocus) {
                     validador.estaValido();
                 }
             }
@@ -125,7 +158,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String telefoneComDdd = campoTelefoneComDdd.getText().toString();
-                if(hasFocus){
+                if (hasFocus) {
                     String telefoneComDddSemFormatacao = formatador.remove(telefoneComDdd);
                     campoTelefoneComDdd.setText(telefoneComDddSemFormatacao);
                 } else {
@@ -159,7 +192,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
         try {
             String cpfSemFormato = formatador.unformat(cpf);
             campoCpf.setText(cpfSemFormato);
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             Log.e(ERRO_FORMATAO_CPF, e.getMessage());
         }
     }
@@ -183,7 +216,6 @@ public class FormularioCadastroActivity extends AppCompatActivity {
             }
         });
     }
-
 
 
 }

@@ -1,15 +1,15 @@
-plugins {
-    id 'com.android.application'
-}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "br.com.unip.pimIV.hotelFazenda"
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -37,6 +37,11 @@ dependencies {
 
     //API Valida CPF
     implementation 'br.com.caelum.stella:caelum-stella-core:2.1.2'
+
+
+    // Firebase
+    implementation "com.google.firebase:firebase-analytics:17.4.3"
+    implementation "com.google.firebase:firebase-auth:19.3.1"
 
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'

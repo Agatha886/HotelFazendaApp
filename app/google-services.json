@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "371235639158",
+    "project_id": "hotel-fazenda-24b01",
+    "storage_bucket": "hotel-fazenda-24b01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371235639158:android:7f63ba6d556b0080d3b457",
+        "android_client_info": {
+          "package_name": "br.com.unip.pimIV.hotelFazenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371235639158-3te1ean7o24uk5d4o9h4om47npupcjc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFoMlsJlogBrX01CC0NTjJsB_I0kw0t-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371235639158-3te1ean7o24uk5d4o9h4om47npupcjc0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -30,7 +30,6 @@ public class ContaDoUsuarioFragment extends Fragment {
         setCampoCpf(usuario);
         setCampoEmail(usuario);
         setCampoTelefone(usuario);
-
     }
 
     private void setCampoTelefone(Usuario usuario) {

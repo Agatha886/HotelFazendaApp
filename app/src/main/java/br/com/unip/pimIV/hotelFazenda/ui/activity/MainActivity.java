@@ -13,20 +13,18 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import br.com.unip.pimIV.hotelFazenda.R;
-import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
 import br.com.unip.pimIV.hotelFazenda.fragment.ContaDoUsuarioFragment;
 import br.com.unip.pimIV.hotelFazenda.fragment.ListaDeComprasFragment;
 import br.com.unip.pimIV.hotelFazenda.fragment.ListaQuartosFragment;
-import br.com.unip.pimIV.hotelFazenda.fragment.QuandoItemClicado;
 import br.com.unip.pimIV.hotelFazenda.fragment.SobreNosFragment;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
-import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 
 import static br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO.usuario;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_POSICAO;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_USER;
 
+@SuppressWarnings("deprecation")
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -54,52 +52,45 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bN = findViewById(R.id.bottom_navigation);
         bN.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), android.R.color.transparent));
 
-        if (bN != null) {
-            bN.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-                Fragment fragmentSelecionado = null;
+        bN.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            Fragment fragmentSelecionado = null;
 
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    int itemId = item.getItemId();
-                    if (itemId == R.id.sobre_nos) {
-                        fragmentSelecionado = new SobreNosFragment();
-                        setTitle("Sobre Nós");
-                    }
-                    if (itemId == R.id.lista_quartos) {
-                        fragmentSelecionado = new ListaQuartosFragment();
-                        setTitle("Lista De Quartos");
-                        setCliqueItemQuarto();
-                    }
-                    if (itemId == R.id.conta_login) {
-                        fragmentSelecionado = new ContaDoUsuarioFragment();
-                        setTitle("Minha Conta");
-                    }
-
-                    if (itemId == R.id.minhas_compras) {
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable(CHAVE_USER, usuario);
-                        fragmentSelecionado = new ListaDeComprasFragment();
-                        fragmentSelecionado.setArguments(bundle);
-                    }
-
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.activity_main_container, fragmentSelecionado)
-                            .commit();
-                    return true;
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+                if (itemId == R.id.sobre_nos) {
+                    fragmentSelecionado = new SobreNosFragment();
+                    setTitle("Sobre Nós");
+                }
+                if (itemId == R.id.lista_quartos) {
+                    fragmentSelecionado = new ListaQuartosFragment();
+                    setTitle("Lista De Quartos");
+                    setCliqueItemQuarto();
+                }
+                if (itemId == R.id.conta_login) {
+                    fragmentSelecionado = new ContaDoUsuarioFragment();
+                    setTitle("Minha Conta");
                 }
 
-                private void setCliqueItemQuarto() {
-                    ListaQuartosFragment fragment = (ListaQuartosFragment) fragmentSelecionado;
-                    fragment.setQuandoItemClicado(new QuandoItemClicado() {
-                        @Override
-                        public void quandoClicado(Quarto quarto, int posicao) {
-                            vaiParaFormularioNotaActivityModifica(quarto, posicao);
-                        }
-                    });
+                if (itemId == R.id.minhas_compras) {
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(CHAVE_USER, usuario);
+                    fragmentSelecionado = new ListaDeComprasFragment();
+                    fragmentSelecionado.setArguments(bundle);
                 }
-            });
-        }
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.activity_main_container, fragmentSelecionado)
+                        .commit();
+                return true;
+            }
+
+            private void setCliqueItemQuarto() {
+                ListaQuartosFragment fragment = (ListaQuartosFragment) fragmentSelecionado;
+                fragment.setQuandoItemClicado(MainActivity.this::vaiParaFormularioNotaActivityModifica);
+            }
+        });
     }
 
     private void vaiParaFormularioNotaActivityModifica(Quarto quarto, int posicao) {
