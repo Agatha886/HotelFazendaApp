@@ -26,7 +26,6 @@ import br.com.unip.pimIV.hotelFazenda.validator.ValidacaoPadrao;
 import br.com.unip.pimIV.hotelFazenda.validator.Validador;
 
 
-
 public class FormularioCadastroActivity extends AppCompatActivity {
 
     private static final String ERRO_FORMATAO_CPF = "erro formatação cpf";
