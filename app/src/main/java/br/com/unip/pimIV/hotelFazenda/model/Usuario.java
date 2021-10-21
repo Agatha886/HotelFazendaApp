@@ -21,6 +21,11 @@ public class Usuario implements Serializable {
         this.listaDeCompras = new ArrayList<>();
     }
 
+    // Não apagar esse construtor pelo amor de Deus!!!!!
+    public Usuario() {
+
+    }
+
     public String getEmail() {
         return email;
     }

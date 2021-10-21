@@ -18,11 +18,12 @@ import com.google.firebase.FirebaseNetworkException;
 import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
 import br.com.unip.pimIV.hotelFazenda.model.Usuario;
+import br.com.unip.pimIV.hotelFazenda.util.MandaUsuario;
 import br.com.unip.pimIV.hotelFazenda.viewModel.LoginViewModel;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity {
 
-    private final LoginViewModel viewModel = new LoginViewModel();
+    private final LoginViewModel viewModel = new LoginViewModel(new UsuarioDAO());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,28 +52,24 @@ public class LoginActivity extends AppCompatActivity{
     }
 
     private void loga(Editable email, Editable senha, Button btnLogar) {
-        btnLogar.setOnClickListener(view -> viewModel.verificaUsuario(email, senha, retornaSucesso(), retornaFalha()));
-    }
-
-    private OnFailureListener retornaFalha(){
-        return exception -> {
-            Log.e("USUARIO ERRO", "onFailure:", exception );
-            if (exception.getClass().equals(FirebaseNetworkException.class)) {
-                Toast.makeText(LoginActivity.this, "Sem internet", Toast.LENGTH_LONG).show();
-            }else{
-                Toast.makeText(LoginActivity.this, "Login Inválido", Toast.LENGTH_LONG).show();
-            }
-        };
-    }
-
-    private OnSuccessListener retornaSucesso(){
-        return success-> {
-                Usuario agatha = new Usuario(
-                        "Agatha", "12588758895", "(12) 995623589", "agatha@gmail.com", "123");
-                UsuarioDAO.usuario = agatha;
+        btnLogar.setOnClickListener(view -> viewModel.verificaUsuario(email, senha, new MandaUsuario() {
+            @Override
+            public void sucesso(Usuario usuario) {
+                Log.i("TAG", "sucesso:" + usuario.getNome() + usuario.getEmail());
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-        };
+            }
+
+            @Override
+            public void falha(Exception e) {
+                Log.e("USUARIO ERRO", "onFailure:", e);
+                if (e.getClass().equals(FirebaseNetworkException.class)) {
+                    Toast.makeText(LoginActivity.this, "Sem internet", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Login Inválido", Toast.LENGTH_LONG).show();
+                }
+            }
+        }));
     }
 
 }
