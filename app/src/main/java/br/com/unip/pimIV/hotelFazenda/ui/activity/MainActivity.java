@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,8 +19,9 @@ import br.com.unip.pimIV.hotelFazenda.fragment.ListaDeComprasFragment;
 import br.com.unip.pimIV.hotelFazenda.fragment.ListaQuartosFragment;
 import br.com.unip.pimIV.hotelFazenda.fragment.SobreNosFragment;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
+import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 
-import static br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO.usuario;
+import static br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO.usuarioLiveDate;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_POSICAO;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_USER;
@@ -31,8 +33,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setMensagemDeOla();
-        setNavegacao();
+        usuarioLiveDate.observe(this, new Observer<Usuario>() {
+            @Override
+            public void onChanged(Usuario usuario) {
+                if(usuario != null){
+                    setMensagemDeOla(usuario);
+                    setNavegacao(usuario);
+                }else {
+                    onBackPressed();
+                }
+            }
+        });
     }
 
     @Override
@@ -42,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setMensagemDeOla() {
+    private void setMensagemDeOla(Usuario usuario) {
         String mensagemDeOla = "Olá," + " " + usuario.getNome();
         TextView campoMensagem = findViewById(R.id.main_textView_nome);
         campoMensagem.setText(mensagemDeOla);
     }
 
-    private void setNavegacao() {
+    private void setNavegacao(Usuario usuario) {
         BottomNavigationView bN = findViewById(R.id.bottom_navigation);
         bN.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), android.R.color.transparent));
 
@@ -68,7 +79,10 @@ public class MainActivity extends AppCompatActivity {
                     setCliqueItemQuarto();
                 }
                 if (itemId == R.id.conta_login) {
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable(CHAVE_USER, usuario);
                     fragmentSelecionado = new ContaDoUsuarioFragment();
+                    fragmentSelecionado.setArguments(bundle);
                     setTitle("Minha Conta");
                 }
 

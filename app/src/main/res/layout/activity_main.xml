@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:layout_marginLeft="30dp"
-        android:text="Oi, Agatha"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="35sp"

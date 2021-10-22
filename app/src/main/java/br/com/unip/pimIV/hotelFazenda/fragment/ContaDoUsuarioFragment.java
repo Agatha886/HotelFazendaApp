@@ -13,9 +13,11 @@ import androidx.fragment.app.Fragment;
 import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 
-import static br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO.usuario;
+import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_USER;
 
 public class ContaDoUsuarioFragment extends Fragment {
+
+    private Usuario usuario;
 
     @Nullable
     @Override
@@ -26,10 +28,13 @@ public class ContaDoUsuarioFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setCampoNome(usuario);
-        setCampoCpf(usuario);
-        setCampoEmail(usuario);
-        setCampoTelefone(usuario);
+        usuario = (Usuario) getArguments().getSerializable(CHAVE_USER);
+        if(usuario != null){
+            setCampoNome(usuario);
+            setCampoCpf(usuario);
+            setCampoEmail(usuario);
+            setCampoTelefone(usuario);
+        }
     }
 
     private void setCampoTelefone(Usuario usuario) {

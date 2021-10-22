@@ -10,15 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseNetworkException;
 
 import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
-import br.com.unip.pimIV.hotelFazenda.model.Usuario;
-import br.com.unip.pimIV.hotelFazenda.util.MandaUsuario;
+import br.com.unip.pimIV.hotelFazenda.util.LogaUsuario;
 import br.com.unip.pimIV.hotelFazenda.viewModel.LoginViewModel;
 
 public class LoginActivity extends AppCompatActivity {
@@ -52,10 +49,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loga(Editable email, Editable senha, Button btnLogar) {
-        btnLogar.setOnClickListener(view -> viewModel.verificaUsuario(email, senha, new MandaUsuario() {
+        btnLogar.setOnClickListener(view -> viewModel.verificaUsuario(email, senha, new LogaUsuario() {
             @Override
-            public void sucesso(Usuario usuario) {
-                Log.i("TAG", "sucesso:" + usuario.getNome() + usuario.getEmail());
+            public void sucesso() {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }
