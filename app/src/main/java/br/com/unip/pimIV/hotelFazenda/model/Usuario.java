@@ -1,7 +1,6 @@
 package br.com.unip.pimIV.hotelFazenda.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario implements Serializable {
@@ -10,7 +9,6 @@ public class Usuario implements Serializable {
     private String telefone;
     private String email;
     private String senha;
-    public List<Quarto>  listaDeCompras;
 
     public Usuario(String nome, String cpf, String telefone, String email, String senha) {
         this.nome = nome;
@@ -18,7 +16,6 @@ public class Usuario implements Serializable {
         this.telefone = telefone;
         this.email = email;
         this.senha = senha;
-        this.listaDeCompras = new ArrayList<>();
     }
 
     // Não apagar esse construtor pelo amor de Deus!!!!!

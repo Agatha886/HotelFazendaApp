@@ -1,7 +1,9 @@
+
 package br.com.unip.pimIV.hotelFazenda.dao;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -58,6 +60,23 @@ public class UsuarioDAO {
         set.addOnSuccessListener(onSuccessListener);
         set.addOnFailureListener(onFailureListener);
 
+    }
+
+    public LiveData<List<Quarto>> getListaCompra(OnFailureListener onFailureListener){
+
+        MutableLiveData<List<Quarto>> quartos = new MutableLiveData();
+
+        DocumentReference document = firebaseFirestore.collection("usuarios").document("listaCompras");
+        Task<DocumentSnapshot> documentSnapshotTask = document.get();
+        documentSnapshotTask.addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                Log.i("TAG", "onSuccess:" + documentSnapshot);
+            }
+        });
+
+        documentSnapshotTask.addOnFailureListener(onFailureListener);
+        return quartos;
     }
 
     public void adicionaCompra(Quarto quarto) {

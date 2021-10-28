@@ -25,6 +25,12 @@ public class Quarto implements Serializable {
         this.precoTotal = precoDaDiaria;
     }
 
+    public Quarto(String quarto, String imagem, int pessoas) {
+        this.quarto = quarto;
+        this.imagem = imagem;
+        this.pessoas = pessoas;
+    }
+
     public BigDecimal getPrecoTotal() {
         return precoTotal;
     }

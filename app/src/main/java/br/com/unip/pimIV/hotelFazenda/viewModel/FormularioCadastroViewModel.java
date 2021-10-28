@@ -10,15 +10,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
 
-
 public class FormularioCadastroViewModel extends ViewModel {
 
     private final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private final UsuarioDAO usuarioDAO = new UsuarioDAO();
 
     public void cadastroRealizado(String cpf, String email, String nome, String senha, String telefone, OnFailureListener onFailureListener, OnSuccessListener<AuthResult> onSuccessListener) {
-
-
         Task<AuthResult> userWithEmailAndPassword = firebaseAuth.createUserWithEmailAndPassword(email, senha);
         userWithEmailAndPassword.addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
