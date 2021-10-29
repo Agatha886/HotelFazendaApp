@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,6 @@ import br.com.unip.pimIV.hotelFazenda.validator.ValidaTelefoneComDdd;
 import br.com.unip.pimIV.hotelFazenda.validator.ValidacaoPadrao;
 import br.com.unip.pimIV.hotelFazenda.validator.Validador;
 import br.com.unip.pimIV.hotelFazenda.viewModel.FormularioCadastroViewModel;
-
 
 public class FormularioCadastroActivity extends AppCompatActivity {
 
@@ -88,6 +88,11 @@ public class FormularioCadastroActivity extends AppCompatActivity {
         return e -> {
             if (e.getClass().equals(FirebaseNetworkException.class)) {
                 Toast.makeText(FormularioCadastroActivity.this, "Sem internet", Toast.LENGTH_LONG).show();
+            }else if(e.getClass() == FirebaseAuthUserCollisionException.class){
+                Toast.makeText(FormularioCadastroActivity.this, "Email já cadastrado", Toast.LENGTH_LONG).show();
+
+            }else{
+                Toast.makeText(FormularioCadastroActivity.this, "Falha ao cadastrar", Toast.LENGTH_LONG).show();
             }
         };
     }
