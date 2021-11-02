@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 
 /**
- * Classe modelo Quartos, representa os quartos do aplicativo
+ * Classe modelo Quarto, representa os quartos do aplicativo
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
