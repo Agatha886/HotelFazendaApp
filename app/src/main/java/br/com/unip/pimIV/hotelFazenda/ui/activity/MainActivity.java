@@ -25,8 +25,19 @@ import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_POSICAO
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_USER;
 
+
+/**
+ * Classe da Activity principal que representa a tela do menu principal do aplicativo.
+ *
+ * @author Agatha Monfredini
+ */
+
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Método responsável por criar/inicializar a MainActivity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         setNavegacao();
     }
 
+    /**
+     * Sobrescrita do método onBackPressed para quando o botão de voltar for pressionado, o aplicativo
+     * volte para tela de Login apagando pilha de activitys
+     */
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, LoginActivity.class);
@@ -42,11 +57,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    /**
+     * Preenche mensagem de boas vindas do menu principal com o nome do usuário
+     */
     private void setMensagemDeOla() {
         String mensagemDeOla = "Olá," + " " + usuario.getNome();
         TextView campoMensagem = findViewById(R.id.main_textView_nome);
         campoMensagem.setText(mensagemDeOla);
     }
+
+    /**
+     * Realiza toda a configuração de navegação dos Fragments da tela de menu,para que quando um
+     * usuário clicar em um item específico do menu aparece cada Fragement correspondente
+     */
 
     private void setNavegacao() {
         BottomNavigationView bN = findViewById(R.id.bottom_navigation);
@@ -97,6 +121,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Realiza a configuração do evento de clique de cada item da lista de quartos do fragment ListaQuartosFragment.
+     * Para quando o item for da lista for clicado o usuário seja direcionado para tela de CadastroHospedagemActivity
+     * @param quarto
+     * @param posicao
+     */
 
     private void vaiParaFormularioNotaActivityModifica(Quarto quarto, int posicao) {
         Intent abreFormularioComNota = new Intent(MainActivity.this, CadastroHospedagemActivity.class);
