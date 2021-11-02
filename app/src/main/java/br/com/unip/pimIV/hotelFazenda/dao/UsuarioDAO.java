@@ -8,7 +8,7 @@ import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 
 /**
- * Classe resposável pelo banco de dados dos usuários do aplicativo
+ * Classe responsável pelo banco de dados dos usuários do aplicativo
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0

@@ -1,7 +1,7 @@
 package br.com.unip.pimIV.hotelFazenda.formatter;
 
 /**
- * Classe resposável por fomatar o txto digitidado no campo Telefone do formulário de cadstro de usuário
+ * Classe responsável por fomatar o texto digitado no campo Telefone do formulário de cadstro de usuário
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
@@ -10,7 +10,6 @@ public class FormataTelefoneComDdd {
 
     /**
      * Método formata uma String para o formato de telefone padrão no Brasil
-     *
      * @param telefoneComDdd
      * @return
      */
