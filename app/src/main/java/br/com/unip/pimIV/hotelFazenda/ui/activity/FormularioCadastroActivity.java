@@ -15,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.caelum.stella.format.CPFFormatter;
-import br.com.unip.pimIV.hotelFazenda.R;
+
+
 import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
 import br.com.unip.pimIV.hotelFazenda.formatter.FormataTelefoneComDdd;
 import br.com.unip.pimIV.hotelFazenda.model.Usuario;

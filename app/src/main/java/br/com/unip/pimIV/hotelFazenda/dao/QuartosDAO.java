@@ -7,9 +7,18 @@ import java.util.List;
 
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 
+/**
+ * Classe resposável pelo banco de dados dos quartos do aplicativo
+ * @version 1.0.0
+ * @author Agatha Monfredini de Paula Faria
+ */
 public class QuartosDAO {
-    public List<Quarto> lista() {
 
+    /**
+     * Método retorna uma lista estática de quartos cadastrados no aplicatvo
+     * @return
+     */
+    public List<Quarto> lista() {
         List<Quarto> pacotes = new ArrayList<>(Arrays.asList(
                 new Quarto("Quarto Casal Simples", "quartocasal", 2, new BigDecimal(243.99)),
                 new Quarto("Quarto Casal Com Vista", "quartocasalcomvista", 2, new BigDecimal(321.50)),

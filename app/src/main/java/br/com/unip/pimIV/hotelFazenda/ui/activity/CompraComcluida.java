@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import br.com.unip.pimIV.hotelFazenda.R;
+
+
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 import br.com.unip.pimIV.hotelFazenda.ui.fragment.DetalhesDaCompraFragment;
 

@@ -12,7 +12,8 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import br.com.unip.pimIV.hotelFazenda.R;
+
+
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 import br.com.unip.pimIV.hotelFazenda.ui.fragment.ContaDoUsuarioFragment;
 import br.com.unip.pimIV.hotelFazenda.ui.fragment.ListaDeComprasFragment;
@@ -29,13 +30,15 @@ import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_USER;
 /**
  * Classe da Activity principal que representa a tela do menu principal do aplicativo.
  *
- * @author Agatha Monfredini
+ * @version 1.0.0
+ * @author Agatha Monfredini de Paula Faria
  */
 
 public class MainActivity extends AppCompatActivity {
 
     /**
      * Método responsável por criar/inicializar a MainActivity
+     *
      * @param savedInstanceState
      */
     @Override
@@ -47,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Sobrescrita do método onBackPressed para quando o botão de voltar for pressionado, o aplicativo
-     * volte para tela de Login apagando pilha de activitys
+     * Sobrescrita do método onBackPressed para quando o botão de voltar for pressionado, o aplicativo volte para tela de Login apagando pilha de activitys
      */
     @Override
     public void onBackPressed() {
@@ -68,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Realiza toda a configuração de navegação dos Fragments da tela de menu,para que quando um
-     * usuário clicar em um item específico do menu aparece cada Fragement correspondente
+     * Realiza toda a configuração de navegação dos Fragments da tela de menu,para que quando um usuário clicar em um item específico do menu aparece cada Fragement correspondente
      */
 
     private void setNavegacao() {
