@@ -32,7 +32,7 @@ public class ListaComprasAdapter extends RecyclerView.Adapter<ListaComprasAdapte
     private final Context context;
 
     /**
-     * O parâmetro quartos refere-se a lista de quartos comprados pelo o usuário no aplicativo
+     * O atributo quartos refere-se a lista de quartos comprados pelo o usuário no aplicativo
      */
     private final List<Quarto> quartos;
 

@@ -12,32 +12,32 @@ import java.util.List;
  */
 public class Usuario implements Serializable {
     /**
-     * Parâmetro responsável por guardar o nome do usuário
+     * Atributo responsável por guardar o nome do usuário
      */
     private String nome;
 
     /**
-     * Parâmetro responsável por guardar o CPF do usuário
+     * Atributo responsável por guardar o CPF do usuário
      */
     private String cpf;
 
     /**
-     * Parâmetro responsável por guardar o telefone do usuário
+     * Atributo responsável por guardar o telefone do usuário
      */
     private String telefone;
 
     /**
-     * Parâmetro responsável por guardar o e-mail do usuário
+     * Atributo responsável por guardar o e-mail do usuário
      */
     private String email;
 
     /**
-     * Parâmetro responsável por guardar a senha do usuário
+     * Atributo responsável por guardar a senha do usuário
      */
     private String senha;
 
     /**
-     * Parâmetro responsável por guardar a lista de compras do usuário
+     * Atributo responsável por guardar a lista de compras do usuário
      */
     public List<Quarto> listaDeCompras;
 
@@ -60,7 +60,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>email</b>
+     * Retorna valor do atributo </b>email</b>
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>senha</b>
+     * Retorna valor do atributo </b>senha</b>
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>nome</b>
+     * Retorna valor do atributo </b>nome</b>
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>cpf</b>
+     * Retorna valor do atributo </b>cpf</b>
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class Usuario implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>telefone</b>
+     * Retorna valor do atributo </b>telefone</b>
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class Usuario implements Serializable {
 
     /**
      * Sobreescrita do método equals.
-     * Responsável por verificar se um usuário é igual ao outro através dos parâmetros de e-mail e senha
+     * Responsável por verificar se um usuário é igual ao outro através dos atributos de e-mail e senha
      *
      * @param o
      * @return

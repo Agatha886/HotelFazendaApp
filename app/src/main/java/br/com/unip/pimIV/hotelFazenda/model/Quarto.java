@@ -13,36 +13,36 @@ import java.util.Calendar;
 public class Quarto implements Serializable {
 
     /**
-     * Parâmetro responsável por guardar o nome do quarto
+     * Atributo responsável por guardar o nome do quarto
      */
     private final String quarto;
     /**
-     * Parâmetro responsável por guardar o nome da imagem do quarto
+     * Atributo responsável por guardar o nome da imagem do quarto
      */
     private final String imagem;
 
     /**
-     * Parâmetro responsável por guardar a capacidade de pessoas do guarto
+     * Atributo responsável por guardar a capacidade de pessoas do guarto
      */
     private final int pessoas;
 
     /**
-     * Parâmetro responsável por guardar a data de ida (check-in) do aluguel do quarto
+     * Atributo responsável por guardar a data de ida (check-in) do aluguel do quarto
      */
     protected Calendar dateDeIda;
 
     /**
-     * Parâmetro responsável por guardar a data de volta (check-out) do aluguel do quarto
+     * Atributo responsável por guardar a data de volta (check-out) do aluguel do quarto
      */
     protected Calendar dateDeVoltar;
 
     /**
-     * Parâmetro responsável por guardar o valor da diária do quarto
+     * Atributo responsável por guardar o valor da diária do quarto
      */
     private BigDecimal precoDaDiaria;
 
     /**
-     * Parâmetro responsável por guardar o valor total da hospedagem
+     * Atributo responsável por guardar o valor total da hospedagem
      */
     private BigDecimal precoTotal;
 
@@ -65,7 +65,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>precoTotal</b>
+     * Retorna valor do atributo </b>precoTotal</b>
      *
      * @return
      */
@@ -74,7 +74,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>quarto</b>
+     * Retorna valor do atributo </b>quarto</b>
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>imagem</b>
+     * Retorna valor do atributo </b>imagem</b>
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>pessoas</b>
+     * Retorna valor do atributo </b>pessoas</b>
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>precoDaDiaria</b>
+     * Retorna valor do atributo </b>precoDaDiaria</b>
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>dateDeIda</b>
+     * Retorna valor do atributo </b>dateDeIda</b>
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Atribui valor ao parâmetro </b>precoTotal</b>
+     * Atribui valor ao atributo </b>precoTotal</b>
      * @param precoDaDiaria
      */
     public void setPrecoTotal(BigDecimal precoDaDiaria) {
@@ -127,7 +127,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Atribui valor ao parâmetro </b>dateDeIda</b>
+     * Atribui valor ao atributo </b>dateDeIda</b>
      * @param dataDeIda
      */
     public void setDataDeIda(Calendar dataDeIda) {
@@ -135,7 +135,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Retorna valor do parâmetro </b>dateDeVoltar</b>
+     * Retorna valor do atributo </b>dateDeVoltar</b>
      * @return
      */
     public Calendar getDataDeVolta() {
@@ -143,7 +143,7 @@ public class Quarto implements Serializable {
     }
 
     /**
-     * Atribui valor ao parâmetro </b>dataDeVolta</b>
+     * Atribui valor ao atributo </b>dataDeVolta</b>
      * @param dataDeVolta
      */
     public void setDataDeVolta(Calendar dataDeVolta) {

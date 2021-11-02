@@ -33,12 +33,12 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
     private final Context context;
 
     /**
-     * O parâmetro quartos refere-se a lista de quartos do aplicativo
+     * O atributo quartos refere-se a lista de quartos do aplicativo
      */
     private final List<Quarto> quartos;
 
     /**
-     * O parâmetro quartos refere-se é uma instância de uma interface responsável pelo evento de clique de cada item desse adapter
+     * O atributo quartos refere-se é uma instância de uma interface responsável pelo evento de clique de cada item desse adapter
      */
     private QuandoItemClicado quandoItemClicado;
 

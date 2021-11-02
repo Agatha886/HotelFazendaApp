@@ -23,8 +23,17 @@ import br.com.unip.pimIV.hotelFazenda.util.ResourcesUltil;
 
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 
+/**
+ * Classe da CadastroHospedagemActivity responsável pela tela de cadastro de hóspedagem
+ * @version 1.0.0
+ * @author Agatha Monfredini de Paula Faria
+ *
+ */
 public class CadastroHospedagemActivity extends AppCompatActivity {
 
+    /**
+     *
+     */
     public static final String TITULO_APPBAR = "Detalhes do Quarto";
     private TextView dataDeIda;
     private TextView dataDeVolta;
