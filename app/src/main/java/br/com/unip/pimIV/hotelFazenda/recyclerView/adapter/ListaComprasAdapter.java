@@ -20,6 +20,9 @@ import br.com.unip.pimIV.hotelFazenda.util.ResourcesUltil;
 
 /**
  * Classe ListaComprasAdapter refere-se a um adapter personalido para lista de compras do aplicativo
+ *
+ * @author Agatha Monfredini de Paula Faria
+ * @version 1.0.0
  */
 public class ListaComprasAdapter extends RecyclerView.Adapter<ListaComprasAdapter.QuartosViewHolder> {
 
@@ -99,7 +102,7 @@ public class ListaComprasAdapter extends RecyclerView.Adapter<ListaComprasAdapte
         }
 
         /**
-         * Responsável por criar cada componente de layout para cada item da lista de compras do adapter e vinculá-los
+         * Responsável por pegar cada componente de layout e cada item da lista de compras do adapter e vinculá-los
          *
          * @param quarto
          */

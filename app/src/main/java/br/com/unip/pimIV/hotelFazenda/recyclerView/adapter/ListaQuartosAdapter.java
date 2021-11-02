@@ -21,6 +21,9 @@ import br.com.unip.pimIV.hotelFazenda.util.ResourcesUltil;
 
 /**
  * Classe ListaQuartosAdapter refere-se a um adapter personalido para quartos do aplicativo
+ *
+ * @author Agatha Monfredini de Paula Faria
+ * @version 1.0.0
  */
 public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapter.QuartosViewHolder> {
 
@@ -115,7 +118,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
         }
 
         /**
-         * Responsável por criar cada componente de layout para cada item da lista de quartos do adapter e vinculá-los
+         * Responsável por pegar cada componente de layout e cada item da lista de quartos do adapter e vinculá-los
          *
          * @param quarto
          */
@@ -141,6 +144,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
 
         /**
          * Vincula informação do limite de pessoas do quarto a um componente de layout para exibi-lo
+         *
          * @param viewCriada
          * @param quarto
          */
@@ -152,6 +156,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
 
         /**
          * Vincula imagem do quarto a um componente de layout para exibi-lo
+         *
          * @param viewCriada
          * @param quarto
          */
@@ -163,6 +168,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
 
         /**
          * Vincula informação do nome do quarto a um componente de layout para exibi-lo
+         *
          * @param viewCriada
          * @param quarto
          */
