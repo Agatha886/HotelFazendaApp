@@ -47,7 +47,7 @@ public class ListaComprasAdapter extends RecyclerView.Adapter<ListaComprasAdapte
 
     /**
      * Sobrescrita  do método onCreateViewHolder, responsável por criar uma ViewGroup para ser
-     * usada pela na criação da instância de QuartosViewHolder
+     * usada na criação de uma instância de QuartosViewHolder
      *
      * @param parent
      * @param viewType
