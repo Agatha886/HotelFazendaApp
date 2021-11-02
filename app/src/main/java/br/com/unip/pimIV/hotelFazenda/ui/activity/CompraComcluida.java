@@ -8,8 +8,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import br.com.unip.pimIV.hotelFazenda.R;
-import br.com.unip.pimIV.hotelFazenda.fragment.DetalhesDaCompraFragment;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
+import br.com.unip.pimIV.hotelFazenda.ui.fragment.DetalhesDaCompraFragment;
 
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 

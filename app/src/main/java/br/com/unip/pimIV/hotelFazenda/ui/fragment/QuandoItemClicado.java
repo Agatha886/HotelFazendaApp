@@ -1,4 +1,4 @@
-package br.com.unip.pimIV.hotelFazenda.fragment;
+package br.com.unip.pimIV.hotelFazenda.ui.fragment;
 
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 

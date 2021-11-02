@@ -59,7 +59,7 @@
         android:id="@+id/compra_comcluida_fragemrnt"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        class="br.com.unip.pimIV.hotelFazenda.fragment.DetalhesDaCompraFragment"
+        class="br.com.unip.pimIV.hotelFazenda.ui.activity.fragment.DetalhesDaCompraFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

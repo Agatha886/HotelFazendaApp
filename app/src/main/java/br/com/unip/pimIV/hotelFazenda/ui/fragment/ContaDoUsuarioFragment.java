@@ -1,4 +1,4 @@
-package br.com.unip.pimIV.hotelFazenda.fragment;
+package br.com.unip.pimIV.hotelFazenda.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
