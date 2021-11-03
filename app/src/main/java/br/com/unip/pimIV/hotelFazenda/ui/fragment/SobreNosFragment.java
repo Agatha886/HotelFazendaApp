@@ -9,10 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-
-
-
+/**
+ * Classe da ListaDeComprasFragment responsável pela tela de exibição das informações sobre o Hotel Fazenda no menu principal
+ */
 public class SobreNosFragment extends Fragment {
+    /**
+     * Cria componente View
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
