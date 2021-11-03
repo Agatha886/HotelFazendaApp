@@ -20,7 +20,7 @@ import br.com.unip.pimIV.hotelFazenda.util.PessoasUltil;
 import br.com.unip.pimIV.hotelFazenda.util.ResourcesUltil;
 
 /**
- * Classe ListaQuartosAdapter refere-se a um adapter personalido para quartos do aplicativo
+ * Classe ListaQuartosAdapter refere-se a um adapter personalido para lista de quartos do aplicativo
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
@@ -38,7 +38,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
     private final List<Quarto> quartos;
 
     /**
-     * O atributo quartos refere-se é uma instância de uma interface responsável pelo evento de click de cada item desse adapter
+     * O atributo quandoItemClicado refere-se é uma instância de uma interface responsável pelo evento de click de cada item desse adapter
      */
     private QuandoItemClicado quandoItemClicado;
 

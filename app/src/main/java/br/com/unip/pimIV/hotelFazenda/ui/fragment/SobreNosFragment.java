@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 /**
- * Classe da ListaDeComprasFragment responsável pela tela de exibição das informações sobre o Hotel Fazenda no menu principal
+ * Classe da SobreNosFragment responsável pela tela de exibição das informações sobre o Hotel Fazenda no menu principal
  */
 public class SobreNosFragment extends Fragment {
     /**

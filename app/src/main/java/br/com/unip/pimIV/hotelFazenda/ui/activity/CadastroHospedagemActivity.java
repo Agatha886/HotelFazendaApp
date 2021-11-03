@@ -27,7 +27,7 @@ import br.com.unip.pimIV.hotelFazenda.util.ResourcesUltil;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 
 /**
- * Classe da CadastroHospedagemActivity responsável pela tela de cadastro de hóspedagem
+ * Classe da CadastroHospedagemActivity responsável pela tela de cadastro de hospedagem
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
@@ -35,7 +35,7 @@ import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 public class CadastroHospedagemActivity extends AppCompatActivity {
 
     /**
-     * Atributo responsável pelo título do APPBAR da tela de cadastro de hóspedagem
+     * Atributo responsável pelo título do APPBAR da tela de cadastro de hospedagem
      */
     public static final String TITULO_APPBAR = "Detalhes do Quarto";
 
@@ -50,7 +50,7 @@ public class CadastroHospedagemActivity extends AppCompatActivity {
     private TextView dataDeVolta;
 
     /**
-     * Componente de layout que irá exibir o período de hospedagem do usuário do usuário
+     * Componente de layout que irá exibir o período de hospedagem do usuário
      */
     private TextView textViewPrecoTotal;
 

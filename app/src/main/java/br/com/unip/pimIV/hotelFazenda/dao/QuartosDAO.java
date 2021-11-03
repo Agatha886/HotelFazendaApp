@@ -8,7 +8,7 @@ import java.util.List;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 
 /**
- * Classe resposável pelo banco de dados dos quartos do aplicativo
+ * Classe responsável pelo banco de dados dos quartos do aplicativo
  * @version 1.0.0
  * @author Agatha Monfredini de Paula Faria
  */

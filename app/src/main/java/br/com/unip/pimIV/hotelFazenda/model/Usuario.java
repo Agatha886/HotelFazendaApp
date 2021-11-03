@@ -123,6 +123,10 @@ public class Usuario implements Serializable {
         return senha != null ? senha.equals(usuario.senha) : usuario.senha == null;
     }
 
+    /**
+     * Sobreescrita do método hashCode.
+     * @return
+     */
     @Override
     public int hashCode() {
         int result = email != null ? email.hashCode() : 0;
