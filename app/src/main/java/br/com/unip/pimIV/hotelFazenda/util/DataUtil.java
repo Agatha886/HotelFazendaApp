@@ -4,9 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * Classe responsável por fomatar a adat no padrão brasileiro
+ * Classe responsável por formatar data no padrão brasileiro
  */
-
 public class DataUtil {
 
     /**
