@@ -67,7 +67,7 @@ public class FormularioCadastroActivity extends AppCompatActivity {
     private TextInputLayout textInputNomeCompleto;
 
     /**
-     * Obejeto de UsuarioDao responsável pelo banco de dados dos usuários no aplicativo
+     * Objeto de UsuarioDao responsável pelo banco de dados dos usuários no aplicativo
      */
     private UsuarioDAO usuarioDao = new UsuarioDAO();
 
