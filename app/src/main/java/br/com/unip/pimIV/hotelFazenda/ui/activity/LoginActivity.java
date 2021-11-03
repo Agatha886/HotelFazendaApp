@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * Set o clique do botão cadastro para quando este for clicado o usuário seja direcionado para tela de FormularioCadastroActivity
+     * Set o click do botão cadastro para quando este for clicado o usuário seja direcionado para tela de FormularioCadastroActivity
      *
      * @param btnCdastrar
      */
@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * Set o clique do botão loga para quando este for clicado realize a função de verificar usuário e valida o Login
+     * Set o click do botão loga para quando este for clicado realize a função de verificar usuário e valida o Login
      *
      * @param list
      * @param email

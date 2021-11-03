@@ -118,7 +118,7 @@ public class CadastroHospedagemActivity extends AppCompatActivity {
     }
 
     /**
-     * Set clique do campo dataDeIda e de volta , do layout , para chamar o componente de calendário (DatePicker)
+     * Set click do campo dataDeIda e de volta , do layout , para chamar o componente de calendário (DatePicker)
      */
     private void adicionaCalendario() {
         dataDeIda.setOnClickListener(new View.OnClickListener() {
@@ -175,7 +175,7 @@ public class CadastroHospedagemActivity extends AppCompatActivity {
     }
 
     /**
-     * Set clique do botão realiar compra
+     * Set click do botão realiar compra
      *
      * <b>Procedimentos:</b>
      * Caso período escolhido pelo usuário se valido, este será direcionado para PagamentoActvity

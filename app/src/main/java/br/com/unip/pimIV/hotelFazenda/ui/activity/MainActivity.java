@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 if (itemId == R.id.lista_quartos) {
                     fragmentSelecionado = new ListaQuartosFragment();
                     setTitle("Lista De Quartos");
-                    setCliqueItemQuarto();
+                    setClickItemQuarto();
                 }
                 if (itemId == R.id.conta_login) {
                     fragmentSelecionado = new ContaDoUsuarioFragment();
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 
-            private void setCliqueItemQuarto() {
+            private void setClickItemQuarto() {
                 ListaQuartosFragment fragment = (ListaQuartosFragment) fragmentSelecionado;
                 fragment.setQuandoItemClicado(new QuandoItemClicado() {
                     @Override
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Realiza a configuração do evento de clique de cada item da lista de quartos do fragment ListaQuartosFragment.
+     * Realiza a configuração do evento de click de cada item da lista de quartos do fragment ListaQuartosFragment.
      * Para quando o item for da lista for clicado o usuário seja direcionado para tela de CadastroHospedagemActivity
      * @param quarto
      * @param posicao

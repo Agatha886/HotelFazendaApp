@@ -22,7 +22,7 @@ import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 public class CompraComcluida extends AppCompatActivity {
 
     /**
-     * Método responsável por criar/inicializar a LoginActivity
+     * Método responsável por criar/inicializar a CompraComcluida
      *
      * @param savedInstanceState
      */

@@ -38,7 +38,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
     private final List<Quarto> quartos;
 
     /**
-     * O atributo quartos refere-se é uma instância de uma interface responsável pelo evento de clique de cada item desse adapter
+     * O atributo quartos refere-se é uma instância de uma interface responsável pelo evento de click de cada item desse adapter
      */
     private QuandoItemClicado quandoItemClicado;
 
@@ -54,7 +54,7 @@ public class ListaQuartosAdapter extends RecyclerView.Adapter<ListaQuartosAdapte
     }
 
     /**
-     * Set evento de clique de cada item da lista
+     * Set evento de click de cada item da lista
      *
      * @param quandoItemClicado
      */
