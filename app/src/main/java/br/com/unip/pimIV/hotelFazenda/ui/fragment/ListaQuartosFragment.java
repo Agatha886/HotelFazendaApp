@@ -15,9 +15,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import br.com.unip.pimIV.hotelFazenda.dao.QuartosDAO;
 import br.com.unip.pimIV.hotelFazenda.recyclerView.adapter.ListaQuartosAdapter;
 
+/**
+ * Classe da ListaDeComprasFragment responsável pela tela de exibição da lista de quartos no menu principal
+ */
 public class ListaQuartosFragment extends Fragment {
     private QuandoItemClicado quandoItemClicado;
 
+    /**
+     * Cria componente View
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -27,10 +37,19 @@ public class ListaQuartosFragment extends Fragment {
         return inflater.inflate(R.layout.lista_quartos, container, false);
     }
 
+    /**
+     * Set evento de click de cada item da lista
+     * @param quandoItemClicado
+     */
     public void setQuandoItemClicado(QuandoItemClicado quandoItemClicado) {
         this.quandoItemClicado = quandoItemClicado;
     }
 
+    /**
+     * Realiza configurações dos campos com a View já criada
+     * @param view
+     * @param savedInstanceState
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable  Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
