@@ -62,7 +62,7 @@ public class ValidaTelefoneComDdd implements Validador {
     }
 
     /**
-     * Verifca se telefone digitado é válido
+     * Verifica se telefone digitado é válido
      * @return
      */
     @Override

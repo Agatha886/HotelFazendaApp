@@ -16,7 +16,7 @@ import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 public class UsuarioDAO {
 
     /**
-     * A variável estático usuario é utilizada para retornar as informações do usuário logado em qualquer parte do aplicativo
+     * A variável estática usuario é utilizada para retornar as informações do usuário logado em qualquer parte do aplicativo
      */
     public static Usuario usuario;
 

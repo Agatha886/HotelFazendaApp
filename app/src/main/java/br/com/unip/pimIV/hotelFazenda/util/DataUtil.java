@@ -14,7 +14,7 @@ public class DataUtil {
     public static final SimpleDateFormat FORMATO_BRASILEIRO = new SimpleDateFormat("dd/MM/yyyy");
 
     /**
-     * Formata uma instancia de calendar para o padrão brasileiro
+     * Formata uma instância de calendar para o padrão brasileiro
      * @param calendar
      * @return
      */

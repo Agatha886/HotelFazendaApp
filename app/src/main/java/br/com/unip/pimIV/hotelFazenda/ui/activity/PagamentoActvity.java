@@ -15,7 +15,7 @@ import br.com.unip.pimIV.hotelFazenda.util.MoedaUtil;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 
 /**
- * Classe da PagamentoActvity responsável pela tela de pagamento do pacote de hospedagem selecionado pelo usuário
+ * Classe PagamentoActvity responsável pela tela de pagamento do pacote de hospedagem selecionado pelo usuário
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
@@ -28,7 +28,7 @@ public class PagamentoActvity extends AppCompatActivity {
     private Quarto quarto;
 
     /**
-     * Obejeto de UsuarioDao responsável pelo banco de dados dos usuários no aplicativo
+     * Obejeto de UsuarioDao responsável pelo banco de dados do usuário no aplicativo
      */
     private UsuarioDAO usuarioDAO = new UsuarioDAO();
 

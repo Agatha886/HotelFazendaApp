@@ -13,7 +13,7 @@ import br.com.unip.pimIV.hotelFazenda.ui.fragment.DetalhesDaCompraFragment;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 
 /**
- * Classe da CompraComcluida responsável pela tela de sucesso após o usuário concluir a compra
+ * Classe CompraComcluida responsável pela tela de sucesso após o usuário concluir a compra
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0

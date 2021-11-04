@@ -14,7 +14,7 @@ public class PeriodoUtil {
     public static final String DIA_E_MES = "dd/MM";
 
     /**
-     * Realiza a junção da data de ida e de volta, sendo este então o período no qual o usuário se hospedará
+     * Realiza a junção da data de ida e de volta, sendo este então o período de hospedagem do usuário
      * @param dataDeIda
      * @param dataDeVolta
      * @return

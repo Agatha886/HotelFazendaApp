@@ -20,7 +20,7 @@ import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
 import br.com.unip.pimIV.hotelFazenda.model.Usuario;
 
 /**
- * Classe da LoginActivity responsável pela tela de Login
+ * Classe LoginActivity responsável pela tela de Login
  * @version 1.0.0
  * @author Agatha Monfredini de Paula Faria
  *

@@ -18,7 +18,7 @@ public class ValidacaoPadrao implements Validador{
      */
     private final TextInputLayout textInputCampo;
     /**
-     * Componente responsável por receber as informações digitadas pelo usuario
+     * Componente responsável por receber as informações digitadas pelo usuário
      */
     private final EditText campo;
 

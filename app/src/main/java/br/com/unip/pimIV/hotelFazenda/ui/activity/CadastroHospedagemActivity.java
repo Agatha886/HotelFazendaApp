@@ -27,7 +27,7 @@ import br.com.unip.pimIV.hotelFazenda.util.ResourcesUltil;
 import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_QUARTO;
 
 /**
- * Classe da CadastroHospedagemActivity responsável pela tela de cadastro de hospedagem
+ * Classe CadastroHospedagemActivity responsável pela tela de cadastro de hospedagem
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
@@ -60,7 +60,7 @@ public class CadastroHospedagemActivity extends AppCompatActivity {
     private Quarto quarto;
 
     /**
-     * Atributo com a informação dos do período de hospedagem em dias
+     * Período de hospedagem selecionado pelo usuário em dias
      */
     private int dias;
 

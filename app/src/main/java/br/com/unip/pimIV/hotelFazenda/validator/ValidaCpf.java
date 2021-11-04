@@ -26,7 +26,7 @@ public class ValidaCpf implements Validador {
      */
     public static final String DEVE_TER_ONZE_DIGITOS = "O CPF precisa ter 11 dígitos";
     /**
-     * Mensagem "erro formatação cpf";
+     * Mensagem "erro formatação cpf"
      */
     private static final String ERRO_FORMATAO_CPF = "erro formatação cpf";
 

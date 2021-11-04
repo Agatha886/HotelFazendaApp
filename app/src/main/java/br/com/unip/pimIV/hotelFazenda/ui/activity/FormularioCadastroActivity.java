@@ -26,7 +26,7 @@ import br.com.unip.pimIV.hotelFazenda.validator.Validador;
 
 
 /**
- * Classe da FormularioCadastroActivity responsável pela tela no qual terá o formulário de cadastro de usuário
+ * Classe FormularioCadastroActivity responsável pela tela no qual terá o formulário de cadastro de usuário
  *
  * @author Agatha Monfredini de Paula Faria
  * @version 1.0.0
@@ -38,36 +38,36 @@ public class FormularioCadastroActivity extends AppCompatActivity {
      */
     private static final String ERRO_FORMATAO_CPF = "erro formatação cpf";
     /**
-     * Array de validadores usados nos campos do formulário
+     * Array de validadores usado para validar todos os campos do formulário de cadastro
      */
     private final List<Validador> validadores = new ArrayList<>();
 
     /**
-     * Componente responsável pelo layout do campo onde usuário irá digitar a senha deseja cadastrar
+     * Componente responsável pelo layout do campo senha para realização do cadastro
      */
     private TextInputLayout textInputSenha;
 
     /**
-     * Componente responsável pelo layout do campo onde usuário irá digitar a senha que deseja cadastrar
+     * Componente responsável pelo layout do campo e-mail para realização do cadastro
      */
     private TextInputLayout textInputEmail;
     /**
-     * Componente responsável pelo layout do campo onde usuário irá digitar o telefone que deseja cadastrar
+     * Componente responsável pelo layout do campo telefone para realização do cadastro
      */
     private TextInputLayout textInputTelefoneComDdd;
 
     /**
-     * Componente responsável pelo layout do campo onde usuário irá digitar seu CPF para realização do cadastro
+     * Componente responsável pelo layout do campo CPF para realização do cadastro
      */
     private TextInputLayout textInputCpf;
 
     /**
-     * Componente responsável pelo layout do campo onde usuário irá digitar digitar seu nome para realização do cadastro
+     * Componente responsável pelo layout do campo nome para realização do cadastro
      */
     private TextInputLayout textInputNomeCompleto;
 
     /**
-     * Objeto de UsuarioDao responsável pelo banco de dados dos usuários no aplicativo
+     * Objeto de UsuarioDao responsável pelo banco de dado do usuário no aplicativo
      */
     private UsuarioDAO usuarioDao = new UsuarioDAO();
 

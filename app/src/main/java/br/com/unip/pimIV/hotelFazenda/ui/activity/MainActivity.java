@@ -28,7 +28,7 @@ import static br.com.unip.pimIV.hotelFazenda.ui.activity.Contantes.CHAVE_USER;
 
 
 /**
- * Classe da Activity principal que representa a tela do menu principal do aplicativo.
+ * Classe MainActivity, que representa a tela do menu principal do aplicativo.
  *
  * @version 1.0.0
  * @author Agatha Monfredini de Paula Faria
