@@ -14,7 +14,7 @@ public class ValidacaoPadrao implements Validador{
      */
     private static final String CAMPO_OBRIGATORIO = "Campo obrigatório";
     /**
-     * Componente responsável pelo layout do campo onde usuário irá digitar suas informções
+     * Componente responsável pelo layout do campo onde usuário irá digitar suas informações
      */
     private final TextInputLayout textInputCampo;
     /**
