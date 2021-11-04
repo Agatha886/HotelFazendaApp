@@ -12,7 +12,7 @@ import br.com.caelum.stella.validation.CPFValidator;
 import br.com.caelum.stella.validation.InvalidStateException;
 
 /**
- * Classe responsável pela validação do CPF digitado pelo usua´rio
+ * Classe responsável pela validação do CPF digitado pelo usuário
  */
 public class ValidaCpf implements Validador {
 
