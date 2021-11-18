@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-
+import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 import br.com.unip.pimIV.hotelFazenda.ui.fragment.ContaDoUsuarioFragment;
 import br.com.unip.pimIV.hotelFazenda.ui.fragment.ListaDeComprasFragment;

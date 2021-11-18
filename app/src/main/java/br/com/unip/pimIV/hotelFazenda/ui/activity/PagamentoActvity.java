@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.dao.UsuarioDAO;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 import br.com.unip.pimIV.hotelFazenda.util.MoedaUtil;

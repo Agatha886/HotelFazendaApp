@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import br.com.unip.pimIV.hotelFazenda.R;
+
 /**
  * Classe da SobreNosFragment responsável pela tela de exibição das informações sobre o Hotel Fazenda no menu principal
  */

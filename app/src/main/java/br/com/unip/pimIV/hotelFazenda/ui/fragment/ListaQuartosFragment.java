@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.dao.QuartosDAO;
 import br.com.unip.pimIV.hotelFazenda.recyclerView.adapter.ListaQuartosAdapter;
 

@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
+import br.com.unip.pimIV.hotelFazenda.R;
 import br.com.unip.pimIV.hotelFazenda.model.Quarto;
 import br.com.unip.pimIV.hotelFazenda.util.DataUtil;
 import br.com.unip.pimIV.hotelFazenda.util.MoedaUtil;

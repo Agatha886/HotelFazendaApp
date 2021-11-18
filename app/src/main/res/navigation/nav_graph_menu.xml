@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/sobre_nos"
-        android:name="br.com.unip.pimIV.hotelFazenda.ui.activity.fragment.SobreNosFragment"
+        android:name="br.com.unip.pimIV.hotelFazenda.ui.fragment.SobreNosFragment"
         android:label="Sobre Nós"
         tools:layout="@layout/sobre_nos"/>
 
     <fragment
         android:id="@+id/lista_quartos"
-        android:name="br.com.unip.pimIV.hotelFazenda.ui.activity.fragment.ListaQuartosFragment"
+        android:name="br.com.unip.pimIV.hotelFazenda.ui.fragment.ListaQuartosFragment"
         android:label="Lista de Quartos"
         tools:layout="@layout/lista_quartos"/>
 
     <fragment
         android:id="@+id/conta_login"
-        android:name="br.com.unip.pimIV.hotelFazenda.ui.activity.fragment.ContaDoUsuarioFragment"
+        android:name="br.com.unip.pimIV.hotelFazenda.ui.fragment.ContaDoUsuarioFragment"
         android:label="Meus Dados"
         tools:layout="@layout/conta_usuario"/>
 
     <fragment
         android:id="@+id/minhas_compras"
-        android:name="br.com.unip.pimIV.hotelFazenda.ui.activity.fragment.ListaDeComprasFragment"
+        android:name="br.com.unip.pimIV.hotelFazenda.ui.fragment.ListaDeComprasFragment"
         android:label="Minhas Compras"
         tools:layout="@layout/lista_compras_realizadas"/>
 </navigation>
