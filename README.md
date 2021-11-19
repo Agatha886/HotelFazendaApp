@@ -13,22 +13,24 @@ Fragments</a></p>
 <h1>Protótipo</h1>
 <p>As telas criadas podem ser consultadas pelo link: <a href="https://www.figma.com/file/t5F3z516dlNREKe7vWtU8Q/PIM-IV?node-id=0%3A1">Figma</a></p>
 
+<h1>Telas</h1>
+
 <p float="left" align="center">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/cadastro.PNG" width="300">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/login.PNG" width="325">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_sobre.PNG" width="330">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/cadastro.PNG" width="200">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/login.PNG" width="225">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_sobre.PNG" width="230">
 </p>
 
 <p float="left" align="center">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_quartos.PNG" width="325">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_usuario.PNG" width="305">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_compras.PNG" width="335">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_quartos.PNG" width="225">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_usuario.PNG" width="205">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_compras.PNG" width="235">
 </p>
 
 <p float="left" align="center">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/detalhes_quarto.PNG" width="313">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/pagamento.PNG" width="305">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/compra_realizada.PNG" width="320">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/detalhes_quarto.PNG" width="213">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/pagamento.PNG" width="205">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/compra_realizada.PNG" width="220">
 </p>
 
 
