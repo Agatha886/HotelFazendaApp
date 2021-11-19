@@ -16,20 +16,20 @@ Fragments</a></p>
 <h1>Telas</h1>
 
 <p float="left" align="center">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/cadastro.PNG" width="200">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/cadastro.PNG" width="205">
 <img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/login.PNG" width="225">
 <img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_sobre.PNG" width="230">
 </p>
 
 <p float="left" align="center">
 <img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_quartos.PNG" width="225">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_usuario.PNG" width="205">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_usuario.PNG" width="210">
 <img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/menu_compras.PNG" width="235">
 </p>
 
 <p float="left" align="center">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/detalhes_quarto.PNG" width="213">
-<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/pagamento.PNG" width="205">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/detalhes_quarto.PNG" width="215">
+<img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/pagamento.PNG" width="210">
 <img src="https://github.com/Agatha886/HotelFazendaApp/blob/master/telas/compra_realizada.PNG" width="220">
 </p>
 
